@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+class Student {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String name, id, department;
+        int marks;
+        double attendance, percentage;
+
+        System.out.println("===== STUDENT MANAGEMENT SYSTEM =====");
+
+        System.out.print("Enter Student ID: ");
+        id = sc.nextLine();
+
+        System.out.print("Enter Student Name: ");
+        name = sc.nextLine();
+
+        System.out.print("Enter Department: ");
+        department = sc.nextLine();
+
+        System.out.print("Enter Attendance: ");
+        attendance = sc.nextDouble();
+
+        System.out.print("Enter Marks: ");
+        marks = sc.nextInt();
+
+        percentage = marks;
+
+        System.out.println("\n===== STUDENT REPORT CARD =====");
+
+        System.out.println("Student ID : " + id);
+        System.out.println("Name       : " + name);
+        System.out.println("Department : " + department);
+        System.out.println("Attendance : " + attendance + "%");
+        System.out.println("Marks      : " + marks);
+        System.out.println("Percentage : " + percentage + "%");
+
+        if (marks >= 90) {
+            System.out.println("Grade      : A+");
+        }
+        else if (marks >= 80) {
+            System.out.println("Grade      : A");
+        }
+        else if (marks >= 70) {
+            System.out.println("Grade      : B");
+        }
+        else if (marks >= 50) {
+            System.out.println("Grade      : C");
+        }
+        else {
+            System.out.println("Grade      : F");
+        }
+
+        if (attendance >= 75 && marks >= 40) {
+            System.out.println("Result     : PASS");
+        }
+        else {
+            System.out.println("Result     : FAIL");
+        }
+
+        System.out.println("==============================");
+
+        sc.close();
+    }
+}
